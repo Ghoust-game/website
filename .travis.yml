@@ -7,17 +7,14 @@ install:
 
 script:
   - cd src && ../binaries/hugo --theme=ghoust
-
-after_success:
   - pwd
   - ls
-  - ls src
-  - ls src/public/
+  - ls public
 
 deploy:
   provider: pages
   skip_cleanup: true
-  local_dir: src/public
+  local_dir: public
   github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
   on:
     branch: master
