@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://ghou.st/about/</loc>
+  </url>
+  
+  <url>
+    <loc>https://ghou.st/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ghou.st/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ghou.st/page/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ghou.st/series/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ghou.st/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+</urlset>
