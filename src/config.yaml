@@ -1,0 +1,22 @@
+# http://gohugo.io/overview/configuration/
+languageCode: "en-us"
+title: "Ghoust"
+baseURL: "https://ghou.st"
+pygmentsStyle: "monokai"
+pygmentsUseClasses: true
+permalinks:
+  post: /:year/:month/:title/
+
+taxonomies:
+  tag: "tags"
+  category: "categories"
+  series: "series"
+
+params:
+  subtitle: "Ghoust Game"
+  author:
+    name: "Ghoust Game"
+    firstName: Ghoust
+    lastName: Game
+    github: hackerspaceshop
+    twitter: ghoust

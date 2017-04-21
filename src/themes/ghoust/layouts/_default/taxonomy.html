@@ -1,0 +1,14 @@
+{{ partial "header.html" . }}
+
+<div class="single container">
+    TAXONOMY
+  <header>
+    <h1>{{ .Title }}</h1>
+    <a href="{{.RSSLink}}">RSS Feed <i class="fa fa-rss" style="font-size:1rem; padding-left: 6px;"></i></a>
+  </header>
+  {{ range $index, $element := .Paginator.Pages }}
+    <hr class="spaced">
+    {{ partial "page-summary.html" $element }}
+  {{ end }}
+</div>
+{{ partial "footer.html" . }}

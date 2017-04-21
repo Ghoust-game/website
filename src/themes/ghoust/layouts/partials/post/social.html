@@ -1,0 +1,20 @@
+<script type="text/javascript">
+function shareButton(e) {
+    window.open(e.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes');
+    return false;
+}
+</script>
+
+<hr class="spaced">
+<aside class="social">
+    <div class="social-header">Share this post if you like it. </div>
+    <div class="post-extras">
+      <!-- {% if page.description %}{% assign share-title = page.description | url_escape %}{% else %}{% assign share-title = page.title | url_escape %}{% endif %} -->
+      {{ $twitterTitle := .Title }}
+      {{ if .Params.twitterTitle }}{{ $twitterTitle := .Params.twitterTitle }}{{ end }}
+      {{ $twitterTags := .Params.tags }}
+      {{ if .Params.twitterTags }}{{ $twitterTags := .Params.twitterTags }}{{ end }}
+      <a class="twitter" href="https://twitter.com/intent/tweet?url={{ .Permalink }}&text={{ $twitterTitle }}&via={{ .Site.Params.author.twitter }}{{ if $twitterTags }}&hashtags={{ delimit $twitterTags "," }}{{ end }}&tw_p=tweetbutton" onclick="return shareButton(this)" title="Share on Twitter"><i class="fa fa-twitter"></i></a><a class="facebook" href="http://www.facebook.com/sharer.php?src=bm&u={{ .Permalink }}&t={{ .Title }}" onclick="return shareButton(this)" title="Share on Facebook"><i class="fa fa-facebook"></i></a><a class="google" href="https://plus.google.com/share?url={{ .Permalink }}" onclick="return shareButton(this)" title="Share on Google Plus"><i class="fa fa-google-plus"></i></a><a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{ .Permalink }}" onclick="return shareButton(this)" title="Share on LinkedIn"><i class="fa fa-linkedin"></i></a><a class="share-btn-pocket" href="http://getpocket.com/edit?url={{ .Permalink }}&title={{ .Title }}" onclick="return shareButton(this)" title="Share on LinkedIn"><i class="fa fa-get-pocket"></i></a><a class="email" href="mailto:?subject={{ .Title }}&body={{ .Permalink }}" onclick="return shareButton(this)" title="Share with Email"><i class="fa fa-envelope"></i></a>
+    </div>
+</aside>
+

@@ -1,0 +1,10 @@
+{{ $baseURL := .Site.BaseURL }}
+
+<a href="{{ .Permalink }}" class="list-group-item">
+    <article class="post post-card" style="background:url({{ $baseURL }}/{{ if isset .Params "thumbnail" }}{{ .Params.thumbnail }}{{ else if isset .Params "image" }}{{ .Params.image }}{{ else }}images/various/bulb-300.png{{ end }}) no-repeat center; background-size: cover;">
+        <div class="post-card-header">
+            {{ .Title }}
+        </div>
+        <!--<div class="post-meta">{{ .Date.Format "Mon, Jan 2, 2006" }} - {{ .FuzzyWordCount }} Words, {{ .ReadingTime }} min reading time</div>-->
+    </article>
+</a>

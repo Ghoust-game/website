@@ -1,0 +1,8 @@
+{{ $imgLarge := .Params.img }}
+{{ $imgSmall := $imgLarge }}
+<div class="photoswipe-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+    <a href="{{ $imgLarge }}" data-size="{{ with (imageConfig (print "static" $imgLarge)) }}{{.Width}}x{{.Height}}{{ end }}" data-author="{{ .Params.author }}" class="demo-gallery__img--main">
+        <img src="{{ $imgSmall }}" alt="{{ .Params.caption }}" />
+        <figure>{{ .Params.caption }}</figure>
+    </a>
+</div>

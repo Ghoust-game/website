@@ -1,0 +1,24 @@
+{
+  "name": "ghoust-theme",
+  "version": "1.0.0",
+  "description": "Hugo theme",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp build",
+    "watch": "gulp watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.3.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglifyjs": "^0.6.2",
+    "photoswipe": "^4.1.1"
+  },
+  "dependencies": {
+    "font-awesome": "^4.7.0"
+  }
+}

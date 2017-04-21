@@ -1,0 +1,14 @@
+<div class="links-bold" role="main">
+    <p><a href="/tags/">List by Tags</a></p>
+
+    {{ range (.Site.Pages.GroupByDate "2006") }}
+        {{ if ne .Key "0001" }}<h2 id="y{{ .Key }}">{{ .Key }}</h2>{{ end }}
+
+        <ul>
+            {{ range (where .Pages "Type" "post") }}
+                {{ if .IsPage }}<li><small>{{ .Date | dateFormat "Jan 02" }}&nbsp;</small> <a href="{{ .Permalink }}">{{ .Title }}</a></li>{{ end }}
+            {{ end }}
+        </ul>
+    {{ end }}
+</div>
+</div>

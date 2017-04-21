@@ -1,0 +1,12 @@
+{{ partial "header.html" . }}
+{{ $baseURL := .Site.BaseURL }}
+
+<div class="page single container{{ if .Params.boldLinks }} links-bold{{ end }}">
+{{ if .Params.partial }}
+    {{ partial .Params.partial . }}
+ {{ else }}
+     {{ .Content }}
+ {{ end }}
+</div>
+
+{{ partial "footer.html" . }}
