@@ -8,9 +8,6 @@ install:
 script:
   - cd src && ../binaries/hugo --theme=ghoust
 
-after_success:
-  - cp .travis.yml public
-
 deploy:
   provider: pages
   skip_cleanup: true
