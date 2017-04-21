@@ -8,6 +8,12 @@ install:
 script:
   - cd src && ../binaries/hugo --theme=ghoust
 
+after_success:
+  - pwd
+  - ls
+  - ls src
+  - ls src/public/
+
 deploy:
   provider: pages
   skip_cleanup: true
