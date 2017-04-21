@@ -4,15 +4,14 @@ go:
     - "1.7.1"
 
 before_script:
-    - git clone --branch v2 https://github.com/go-yaml/yaml $GOPATH/src/gopkg.in/yaml.v2
-    - go get -u -v github.com/spf13/hugo
+  - git clone --branch v2 https://github.com/go-yaml/yaml $GOPATH/src/gopkg.in/yaml.v2
+  - go get -u -v github.com/spf13/hugo
 
 script:
-    - git clone https://github.com/hackerspaceshop/ghoust.git
-    - cd ghoust && hugo --theme=ghoust
+  - cd ghoust-website && hugo --theme=ghoust
 
 after_success:
-    - ls ghoust/src/public
+  - ls ghoust-website/src/public
 
 # deploy:
 #   provider: pages
