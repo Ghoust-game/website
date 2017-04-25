@@ -1,15 +1,14 @@
-branches:
-  only:
-    - master
+addons:
+  apt:
+    packages:
+      - python-pygments
 
 install:
   - rm -rf public || exit 0
 
 script:
-  - cd src && ../binaries/hugo --theme=ghoust
-  - pwd
-  - ls
-  - ls public
+  - cd src
+  - ../binaries/hugo --theme=ghoust
 
 deploy:
   provider: pages
